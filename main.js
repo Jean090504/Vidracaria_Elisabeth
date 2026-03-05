@@ -23,25 +23,21 @@ mobileLinks.forEach(link => {
 // Efeito de Scroll no Header
 window.addEventListener('scroll', () => {
     if (window.scrollY > 80) {
-        nav.classList.add('bg-white', 'shadow-xl', 'py-2');
+        nav.classList.add('bg-white', 'shadow-xl', 'py-2')
         nav.classList.remove('bg-white/80', 'py-4', 'border-transparent')
         nav.classList.add('border-blue-100')
     } else {
-        nav.classList.remove('bg-white', 'shadow-xl', 'py-2', 'border-blue-100');
+        nav.classList.remove('bg-white', 'shadow-xl', 'py-2', 'border-blue-100')
         nav.classList.add('bg-white/80', 'py-4', 'border-transparent')
     }
 })
 
 function abrirGPS() {
-    // Endereço exato da Vidraçaria Elisabeth
     const endereco = "R. San Salvador, 24 - Jardim Santa Rita, Itapevi - SP, 06660-200";
-    
-    // Codifica o endereço para URL
     const urlEndereco = encodeURIComponent(endereco);
     
-    // Tenta abrir na aplicação Maps (iOS/Android) ou no browser
-    // Usamos o protocolo universal que o Google recomenda
-    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${urlEndereco}`;
+    // URL Oficial e Limpa
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${urlEndereco}`;
     
     window.open(googleMapsUrl, '_blank');
 }
@@ -52,18 +48,55 @@ console.log("Vidraçaria Elisabeth - Site Ativo")
 //Criar slides de forma móvel
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 20,
     loop: true,
+    centeredSlides: true, // Centraliza o slide ativo
     autoplay: {
-        delay: 4000,
+        delay: 3500,
         disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
     },
     navigation: {
         nextEl: ".swiper-next",
         prevEl: ".swiper-prev",
     },
     breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
+        // No celular: 1.2 slides (mostra uma bordinha do próximo)
+        320: {
+            slidesPerView: 1.2,
+            centeredSlides: true,
+            spaceBetween: 10,
+        },
+        // No tablet: 2 slides
+        768: {
+            slidesPerView: 2,
+            centeredSlides: false,
+            spaceBetween: 20,
+        },
+        // No PC: 3 slides (equilíbrio perfeito)
+        1024: {
+            slidesPerView: 3,
+            centeredSlides: false,
+            spaceBetween: 30,
+        },
     },
-});
+})
+
+const telInput = document.getElementById('tel-mask')
+
+if(telInput) {
+    telInput.addEventListener('input', (e) => {
+        // Remove tudo que não é número
+        let value = e.target.value.replace(/\D/g, "")
+        // Adiciona parênteses
+        value = value.replace(/^(\d{2})(\d)/g, "($1) $2")
+         // Adiciona o hífen
+        value = value.replace(/(\d{5})(\d)/, "$1-$2")
+        // Limita o tamanho
+        e.target.value = value.substring(0, 15)
+    })
+}
+
