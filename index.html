@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidraçaria Elisabeth | Qualidade e Transparência</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+
+<a href="https://wa.me/5511980347789" target="_blank" 
+   class="fixed bottom-6 right-10 bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center shadow-2xl z-[100] hover:scale-110 transition-transform hover:bg-green-600 animate-bounce">
+    <i class="fab fa-whatsapp text-3xl"></i>
+    <span class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
+</a>
+
+<body class="bg-slate-50 text-gray-800 font-sans">
+
+    <nav id="main-nav" class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-3">
+                <img src="./img/logo.png" alt="Logo" class="h-16 w-auto object-contain">
+                
+                <div class="flex flex-col">
+                    <span class="text-2xl font-black tracking-tighter text-blue-900 leading-none uppercase">Elisabeth</span>
+                    <span class="text-[10px] tracking-[0.3em] font-light text-blue-600 uppercase">Vidraçaria</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-10 font-semibold text-gray-700">
+                <a href="#home" class="hover:text-blue-600 transition">Início</a>
+                <a href="#servicos" class="hover:text-blue-600 transition">Serviços</a>
+                <a href="#galeria" class="hover:text-blue-600 transition">Galeria</a>
+                <a href="https://wa.me/5511999999999" target="_blank" class="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 shadow-md transition transform hover:-translate-y-0.5">
+                    Orçamento Rápido
+                </a>
+            </div>
+
+            <button id="mobile-btn" class="md:hidden text-2xl text-blue-900">
+                <i class="fas fa-bars-staggered"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-6 space-y-4 shadow-xl">
+            <a href="#home" class="block font-bold border-b pb-2">Início</a>
+            <a href="#servicos" class="block font-bold border-b pb-2">Serviços</a>
+            <a href="#galeria" class="block font-bold border-b pb-2">Galeria</a>
+            <a href="https://wa.me/5511999999999" class="block text-green-600 font-black"><i class="fab fa-whatsapp mr-2"></i>Chamar no WhatsApp</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover" alt="Vidraçaria de luxo">
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-white mt-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Sofisticação em <br><span class="text-blue-400">Vidros e Espelhos</span></h1>
+            <p class="text-lg md:text-xl mb-10 max-w-xl text-gray-200 leading-relaxed font-light">
+                Na <strong>Vidraçaria Elisabeth</strong>, transformamos seu ambiente com segurança, durabilidade e o acabamento impecável que sua casa merece.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#servicos" class="bg-white text-blue-900 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition shadow-lg">Nossos Serviços</a>
+                <a href="https://wa.me/5511999999999" target="_blank" class="bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-xl"></i> Orçamento Grátis
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="servicos" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
+            <div>
+                <h2 class="text-blue-900 text-sm font-black tracking-widest uppercase mb-2">Excelência em Vidros</h2>
+                <p class="text-4xl font-bold text-gray-900">Nossos Serviços</p>
+            </div>
+            <div class="flex gap-4">
+                <button class="swiper-prev bg-slate-100 hover:bg-blue-600 hover:text-white text-blue-900 w-12 h-12 rounded-full transition-all flex items-center justify-center">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="swiper-next bg-slate-100 hover:bg-blue-600 hover:text-white text-blue-900 w-12 h-12 rounded-full transition-all flex items-center justify-center">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="swiper mySwiper max-w-7xl mx-auto px-6 overflow-visible">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide group relative h-[450px] rounded-3xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Box de Banheiro">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Box de Banheiro</h3>
+                        <p class="text-blue-100 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Vidros temperados com acabamento de alto padrão.</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group relative h-[450px] rounded-3xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Espelhos">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Espelhos</h3>
+                        <p class="text-blue-100 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Bisotados e lapidados sob medida.</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group relative h-[450px] rounded-3xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Sacadas">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Envidraçamento</h3>
+                        <p class="text-blue-100 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Conforto acústico e visual para sua varanda.</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group relative h-[450px] rounded-3xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Esquadrias">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Esquadrias</h3>
+                        <p class="text-blue-100 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Alumínio e vidro para projetos modernos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="atendimento" class="py-24 bg-slate-50 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+            
+            <div class="w-full md:w-1/2">
+                <h2 class="text-blue-900 text-sm font-black tracking-widest uppercase mb-2 text-center md:text-left">Onde estamos</h2>
+                <h3 class="text-4xl font-bold text-gray-900 mb-6 text-center md:text-left">Atendimento em toda a <br><span class="text-blue-600">Região Oeste de SP</span></h3>
+                <p class="text-gray-600 text-lg mb-8 leading-relaxed text-center md:text-left">
+                    Nossa sede está localizada em Itapevi, mas levamos nossa expertise em vidros para toda a Grande São Paulo. Especialistas em Barueri, Santana de Parnaíba e Osasco.
+                </p>
+
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                        <div class="bg-blue-50 p-3 rounded-xl text-blue-600">
+                            <i class="fas fa-truck-fast text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Entrega Ágil</h4>
+                            <p class="text-sm text-gray-500">Logística preparada para toda a Zona Oeste.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                        <div class="bg-blue-50 p-3 rounded-xl text-blue-600">
+                            <i class="fas fa-location-dot text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sede Própria</h4>
+                            <p class="text-sm text-gray-500">R. San Salvador, 24 - Jardim Santa Rita, Itapevi - SP</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex justify-center md:justify-center">
+                        <button onclick="abrirGPS()" class="group bg-blue-900 text-white px-20 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-blue-800 transition shadow-xl transform hover:-translate-y-1 w-full md:w-auto justify-center">
+                            <i class="fas fa-location-arrow group-hover:animate-bounce"></i>
+                            Como Chegar (GPS)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative group">
+                <div class="absolute top-4 left-4 z-10 bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    Atendemos toda a Zona Oeste!
+                </div>
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4087123970423!2d-46.9534947!3d-23.5537537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf01e66b9cb8e1%3A0xbd3af40a45c26c49!2sR.%20San%20Salvador%2C%2024%20-%20Jardim%20Santa%20Rita%2C%20Itapevi%20-%20SP%2C%2006660-200!5e0!3m2!1spt-BR!2sbr!4v1710000000000">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-950 text-white pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
+            <div>
+                <span class="text-2xl font-black tracking-tighter">ELISABETH</span>
+                <p class="mt-6 text-blue-200 leading-relaxed font-light">Excelência em vidros e projetos especiais. Atendimento personalizado em toda a região com garantia de qualidade.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 italic border-l-4 border-blue-500 pl-4">Contatos</h4>
+                <ul class="space-y-4 text-blue-100">
+                    <li><i class="fas fa-phone text-blue-400 mr-3"></i> (11) 0000-0000</li>
+                    <li><i class="fab fa-whatsapp text-blue-400 mr-3"></i> (11) 99999-9999</li>
+                    <li><i class="fas fa-map-marker-alt text-blue-400 mr-3"></i> Rua San Salvador, 24 - Cidade/SP</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 italic border-l-4 border-blue-500 pl-4">Siga-nos</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="w-12 h-12 rounded-full border border-blue-800 flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full border border-blue-800 flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-blue-900 pt-10 flex flex-col md:flex-col justify-center items-center gap-4 text-xs">
+            <div class="text-blue-400 text-center text-center">
+                &copy; 2026 Vidraçaria Elisabeth. Todos os direitos reservados.
+            </div>
+            <div class="text-blue-300 font-medium">
+                Desenvolvido por 
+                <a href="https://www.linkedin.com/in/jeancostadev" target="_blank" class="text-white hover:text-blue-400 transition-all border-b border-blue-700 hover:border-blue-400 pb-0.5">
+                    Jean Costa
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
